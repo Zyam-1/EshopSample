@@ -13,18 +13,10 @@
 </head>
 
 <body>
-    <h1>Main Page</h1>
-    @yield('content')
 
-    <script>
-        $(document).ready(() => {
-            $(".btn").click(
-                () => {
-                    alert("You clicked the login button");
-                }
-            )
-        })
-    </script>
+    {{View::make('header')}}
+    @yield('content')
+    {{View::make("footer")}}
 </body>
 
 </html>
