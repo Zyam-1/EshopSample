@@ -1,7 +1,7 @@
 <footer>
 <div class="card">
     <div class="card-header">
-      Featured
+      A Product of MAB Cosmetics
     </div>
   </div>
 </footer>
