@@ -11,4 +11,8 @@ class ProductController extends Controller
         $data = DB::table('products')->get();
         return view('product', ['products'=>$data]);
     }
+    public function details($id){
+        $data = DB::table("products")->find($id);
+        return view("details",["product"=> $data]);
+    }
 }

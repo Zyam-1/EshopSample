@@ -8,8 +8,16 @@
   </ol>
   <div class="carousel-inner">
     @foreach ($products as $product)
+    <a href="productDetails/{{$product->id}}">
     <div class="carousel-item {{$product->id==1? "active": " "}}">
       <img class="d-block container w-100" style = "height: 450px"  src="{{$product->gallery}}" alt="{{$product->name}}">
+      <div class = "carousel-caption">
+        <h3 class = "text-dark">
+          {{$product->name}}</h3>
+          <h3 class = "text-dark">
+            {{$product->description}}</h3>  
+      </a>   
+      </div>
     </div>
     @endforeach
     
@@ -22,5 +30,20 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
+<h2>Trending Products</h2>
+<div class="row">
+  
+  @foreach ($products as $product)
+  
+    <div class="col-md-3">
+      <a href="/productDetails/{{$product->id}}">
+      <img src="{{$product->gallery}}" alt="" width="100px">
+      <p class = "container">{{$product->name}}</p>
+    </a>  
+    </div>
+  
+      
+  @endforeach
 </div>
 @endsection

@@ -16,7 +16,8 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/login', function () {
     return view('login');
-});
+})->name("login");
 
-Route::post("/login", [UserController::class, "login"]);
-Route::get("/home", [ProductController::class, "index"]);
+Route::post("/login", [UserController::class, "login"])->name("loginPost");
+Route::get("/home", [ProductController::class, "index"])->name("home");
+Route::get("/productDetails/{id?}", [ProductController::class, "details"])->name("details");
