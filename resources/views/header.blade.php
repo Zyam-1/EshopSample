@@ -1,3 +1,7 @@
+<?php 
+  use App\Http\Controllers\ProductController;
+  $item =  ProductController::cartItems();
+?>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -12,7 +16,7 @@
             <a class="nav-link" href="/orders">Orders</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/ShoppingCart">Cart(0)</a>
+            <a class="nav-link" href="/ShoppingCart">Cart({{$item}})</a>
           </li>
         </ul>
         <span class="navbar-text">

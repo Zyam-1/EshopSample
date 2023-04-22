@@ -21,3 +21,4 @@ Route::get('/login', function () {
 Route::post("/login", [UserController::class, "login"])->name("loginPost");
 Route::get("/home", [ProductController::class, "index"])->name("home");
 Route::get("/productDetails/{id?}", [ProductController::class, "details"])->name("details");
+Route::post("/addToCard", [ProductController::class, "addToCart"])->name("addToCart"); 
